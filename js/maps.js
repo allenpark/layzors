@@ -114,19 +114,18 @@ maps.push({ // door, switcher
 maps.push({ // door, button, slider, switcher
     help: "And what is this slider thing?",
     field: [[' ', ' ', ' ', ' ', ' '],
-            [' ', ' ', ' ', ' ', ' '],
             [' ', 'b', ' ', 'f', ' '],
             [' ', ' ', ' ', ' ', ' '],
             [' ', ' ', ' ', ' ', ' '],
             ['0', ' ', ' ', ' ', '0'],
             [' ', 'B', ' ', ' ', ' '],
             [' ', ' ', ' ', '0', '0']],
-    player: [6, 4],
-    buttons: [[2, 4]],
-    sliders: [[6, 3]],
+    player: [5, 4],
+    buttons: [[1, 4]],
+    sliders: [[5, 3]],
     source: [0, 3, 3],
-    goal: [7, 1, 1],
-    door: [1, 2]
+    goal: [6, 1, 1],
+    door: [0, 2]
 });
 
 maps.push({ // door, button, slider, switcher
