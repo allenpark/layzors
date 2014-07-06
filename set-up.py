@@ -52,7 +52,8 @@ target = "rankings"
 lvls = []
 for i in xrange(numLvls):
     lvls.append(genRandString(len(target)))
-lvls.append(subtractNumsToStr(strToNum(target), addStrsToNum(lvls)))
+#lvls.append(subtractNumsToStr(strToNum(target), addStrsToNum(lvls)))
+lvls.append(target)
 
 for i in xrange(numLvls):
     os.makedirs("lvls/" + lvls[i])

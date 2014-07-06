@@ -399,7 +399,7 @@ var onFinish = function (won) {
         }
     } else {
         console.log('Boo.');
-        text.innerHTML = '<b>Click to restart.</b>';
+        text.innerHTML = '<b>You died! Try again.</b>';
     }
 };
 
