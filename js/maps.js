@@ -1,20 +1,34 @@
 var maps = [];
 
-maps.push({ // door
-    help: "Welcome to Layzors! Feel free to experiment on this map and learn your way around. Use WASD or the arrow keys to move. When you're ready, go for the star!",
+maps.push({ // intro
+    help: "",
     field: [[' ', ' ', ' ', ' ', ' '],
-            [' ', ' ', ' ', ' ', ' '],
-            [' ', ' ', ' ', ' ', ' '],
-            [' ', ' ', 'b', ' ', ' '],
+            ['0', ' ', '0', '0', ' '],
+            [' ', ' ', ' ', '0', ' '],
+            ['0', ' ', '0', '0', ' '],
             [' ', ' ', ' ', ' ', ' ']],
-    player: [1, 1],
-    source: [0, 2, 3],
-    goal: [3, 4, 2],
-    door: [4, 3]
+    player: [0, 0],
+    source: [2, 0, 0],
+    goal: [2, 2, 2],
+    door: [4, 0]
 });
 
+maps.push({ // intro
+    help: "",
+    field: [['0', '0', ' ', '0', ' '],
+            ['0', '0', ' ', '0', ' '],
+            [' ', ' ', ' ', 'f', ' '],
+            ['0', '0', ' ', '0', ' '],
+            ['0', '0', ' ', '0', ' ']],
+    player: [0, 4],
+    source: [0, 2, 3],
+    goal: [2, 0, 0],
+    door: [4, 4]
+});
+
+
 maps.push({ // door, button
-    help: "Go for the star! But wait: what's that button???",
+    help: "",
     field: [[' ', ' ', ' ', '0', '0'],
             [' ', ' ', 'b', ' ', '0'],
             [' ', ' ', ' ', '0', '0'],
@@ -27,7 +41,7 @@ maps.push({ // door, button
 });
 
 maps.push({ // door, button
-    help: "Is it safe?",
+    help: "",
     field: [[' ', 'f', ' ', '0'],
             [' ', ' ', ' ', ' '],
             [' ', ' ', ' ', ' ']],
@@ -39,7 +53,7 @@ maps.push({ // door, button
 });
 
 maps.push({ // door
-    help: "Remember, this is a puzzle. Use your head.",
+    help: "",
     field: [[' ', 'f', ' ', ' ', ' ', ' ', ' ', 'b'],
             [' ', ' ', 'f', ' ', ' ', ' ', 'b', ' '],
             [' ', ' ', ' ', 'f', ' ', 'b', ' ', ' '],
@@ -55,7 +69,7 @@ maps.push({ // door
 });
 
 maps.push({ // door, button
-    help: "And a bit harder...",
+    help: "",
     field: [['0', ' ', '0', '0', ' '],
             [' ', 'b', ' ', ' ', ' '],
             ['f', ' ', ' ', 'b', ' '],
@@ -68,7 +82,7 @@ maps.push({ // door, button
 });
 
 maps.push({ // door, button
-    help: "Where do you want the laser to go? And is it possible?",
+    help: "",
     field: [[' ', ' ', '0',  ' '],
             ['b', ' ', 'b', 'b'],
             ['0', ' ',  ' ',  ' '],
@@ -84,7 +98,7 @@ maps.push({ // door, button
 });
 
 maps.push({ // door, button
-    help: "Don't make any missteps!",
+    help: "",
     field: [['0', '0', '0', '0', ' ', ' '],
             ['f', 'b', ' ', 'b', 'b', ' '],
             [' ', ' ', ' ', ' ', ' ', ' '],
@@ -99,7 +113,7 @@ maps.push({ // door, button
 });
 
 maps.push({ // door, switcher
-    help: "What is this switcher thing?",
+    help: "",
     field: [[' ', ' ', ' ', ' ', ' '],
             [' ', 'B', ' ', 'b', ' '],
             [' ', ' ', ' ', ' ', ' '],
@@ -112,7 +126,7 @@ maps.push({ // door, switcher
 });
 
 maps.push({ // door, button, slider, switcher
-    help: "And what is this slider thing?",
+    help: "",
     field: [[' ', ' ', ' ', ' ', ' '],
             [' ', 'b', ' ', 'f', ' '],
             [' ', ' ', ' ', ' ', ' '],
@@ -128,7 +142,7 @@ maps.push({ // door, button, slider, switcher
     door: [0, 2]
 });
 
-maps.push({ // door, button, slider, switcher
+/*maps.push({ // door, button, slider, switcher
     help: "Allen says to replace this one.",
     field: [['f', 'b', '0', ' ', ' '],
             [' ', ' ', 'F', 'b', ' '],
@@ -142,10 +156,10 @@ maps.push({ // door, button, slider, switcher
     source: [0, 3, 3],
     goal: [2, 1, 1],
     door: [3, 2]
-});
+});*/
 
 maps.push({ // door, slider, switchers
-    help: "This is still a puzzle. Where's the laser going and where do you want it to go?",
+    help: "",
     field: [[' ', ' ', ' ', ' ', ' ', ' ', ' '],
             [' ', 'f', ' ', 'F', ' ', ' ', 'b'],
             [' ', ' ', ' ', ' ', ' ', ' ', ' '],
@@ -162,7 +176,7 @@ maps.push({ // door, slider, switchers
 });
 
 maps.push({ // door, slider, switcher, two buttons
-    help: "Good luck!",
+    help: "",
     field: [[' ', ' ', ' ', '0', ' ', ' ', ' ', ' '],
             [' ', ' ', ' ', '0', ' ', 'b', ' ', ' '],
             [' ', 'B', ' ', '0', ' ', ' ', ' ', ' '],

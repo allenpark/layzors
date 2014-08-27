@@ -29,7 +29,7 @@ if os.path.exists("lvls"):
     shutil.rmtree("lvls")
 os.makedirs("lvls")
 
-fileDir = "http://apark93.mit.edu"
+fileDir = "http://simmons-hall.scripts.mit.edu/space-waffle/lasers"
 if os.path.exists("fileDir.txt"):
     fin = open("fileDir.txt")
     fileDir = fin.read().strip()
@@ -85,12 +85,12 @@ print lvls
 fin = open("first.html")
 moveSrc = fin.read()
 fin.close()
-firstSrc = moveSrc.replace("http://example.com", fileDir + "/layzors/lvls/" + lvls[0])
+firstSrc = moveSrc.replace("http://example.com", fileDir + "/lvls/" + lvls[0])
 foutHtml = open("index.html", "w")
 foutHtml.write(firstSrc)
 foutHtml.close()
 
-lastSrc = moveSrc.replace("http://example.com", fileDir + "/layzors/lvls/" + lvls[-1])
+lastSrc = moveSrc.replace("http://example.com", fileDir + "/lvls/" + lvls[-1])
 foutHtml = open("cheats.html", "w")
 foutHtml.write(lastSrc)
 foutHtml.close()

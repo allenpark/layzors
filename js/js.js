@@ -68,7 +68,7 @@ game.handleKeyPress = function(e) {
     if (key == 82) {
         start();
         return;
-    } else if (key == 70) {
+    } else if (key == 70 || key == 32 || key == 13) {
         if (gameWon) {
             window.location = "../" + nextMap;
         }
@@ -390,7 +390,8 @@ var onFinish = function (won) {
     if (won) {
         console.log('Yay!');
         //text.innerHTML = '<b>Click or press \'r\' to go to the next level.</b>';
-        text.innerHTML = '<a href="../' + nextMap + '">Click or press \'f\' to go to the next level (' + nextMap + ').</a>';
+        text.innerHTML = '<b>Click/Enter/Space to go to the next level.</b>';	
+        text.innerHTML = '<a href="../' + nextMap + '">Click/Enter/Space for the next level (' + nextMap + ').</a>';
         gameWon = true;
         //currentMap ++;
         if (currentMap > maps.length) {
@@ -421,4 +422,5 @@ var level = document.getElementById('level');
 window.addEventListener('keydown', makeOnKeyPress(game), false);
 var gameWon = false;
 start();
-console.log("What are you doing looking at the console? Your actions have been logged, and we know where you live. Back to the game with you!");
+console.log("Whoa there! What are you doing looking at the console? Yes, we did not go through the effort of obfuscating our code. Just play the game :D")
+console.log("Your actions have been logged, and we know where you live. Back to the game with you!");
