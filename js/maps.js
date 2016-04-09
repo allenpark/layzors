@@ -1,7 +1,7 @@
 var maps = [];
 
 maps.push({ // door
-    help: "Welcome to Layzors! Feel free to experiment on this map and learn your way around. Use WASD or the arrow keys to move. When you're ready, go for the star!",
+    help: "Welcome to Layzors! Feel free to experiment on this map and learn your way around. When you're ready, go for the star!<br/>Use WASD, the arrow keys, or swipe on the board (if you're on a phone) to move.",
     field: [[' ', ' ', ' ', ' ', ' '],
             [' ', ' ', ' ', ' ', ' '],
             [' ', ' ', ' ', ' ', ' '],

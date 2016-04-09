@@ -60,11 +60,10 @@ game.init = function(map, toDoOnFinish, toDoHelpFunc) {
 };
 
 var makeOnKeyPress = function(x) {
-    return function(e) {x.handleKeyPress(e);};
+    return function(e) {x.handleKeyPress(e.keyCode);};
 };
 
-game.handleKeyPress = function(e) {
-    var key = e.keyCode;
+game.handleKeyPress = function(key) {
     if (key == 82) {
         start();
         return;
@@ -92,7 +91,7 @@ game.handleKeyPress = function(e) {
         this.takeTurn();
     }
 };
-    
+
 game.takeTurn = function(firstTurn) {
     firstTurn = firstTurn || false;
     if (!firstTurn) {
@@ -390,7 +389,7 @@ var onFinish = function (won) {
     if (won) {
         console.log('Yay!');
         //text.innerHTML = '<b>Click or press \'r\' to go to the next level.</b>';
-        text.innerHTML = '<a href="../' + nextMap + '">Click or press \'f\' to go to the next level (' + nextMap + ').</a>';
+        text.innerHTML = '<a href="" onclick="game.handleKeyPress(70)">Click or press \'f\' to go to the next level (' + nextMap + ').</a>';
         gameWon = true;
         //currentMap ++;
         if (currentMap > maps.length) {
@@ -399,7 +398,7 @@ var onFinish = function (won) {
         }
     } else {
         console.log('Boo.');
-        text.innerHTML = '<b>Click to restart.</b>';
+        text.innerHTML = 'Boo, you lost. Click above or press \'r\' to restart';
     }
 };
 
@@ -418,7 +417,17 @@ var start = function() {
 var text = document.getElementById('text');
 var level = document.getElementById('level');
 //var currentMap = 1;
-window.addEventListener('keydown', makeOnKeyPress(game), false);
+window.addEventListener('keydown', makeOnKeyPress(game));
+/*
+document.getElementById('left-arrow').addEventListener('click', function() { game.handleKeyPress(37); });
+document.getElementById('up-arrow').addEventListener('click', function() { game.handleKeyPress(38); });
+document.getElementById('right-arrow').addEventListener('click', function() { game.handleKeyPress(39); });
+document.getElementById('down-arrow').addEventListener('click', function() { game.handleKeyPress(40); });
+*/
+$('#canvas').on('swipeleft', function() {game.handleKeyPress(37);});
+$('#canvas').on('swipeup', function() {game.handleKeyPress(38);});
+$('#canvas').on('swiperight', function() {game.handleKeyPress(39);});
+$('#canvas').on('swipedown', function() {game.handleKeyPress(40);});
 var gameWon = false;
 start();
 console.log("What are you doing looking at the console? Your actions have been logged, and we know where you live. Back to the game with you!");
