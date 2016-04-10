@@ -1,7 +1,20 @@
 var maps = [];
 
+maps.push({ // basic navigation
+  help: "Welcome to Layzors! Feel free to experiment on this map and learn your way around. When you're ready, go for the star!<br/>Use WASD, the arrow keys, or swipe on the board (if you're on a phone) to move.",
+  field: [[" "," "," "," "," "],
+          ["0"," ","0","0"," "],
+          [" "," "," ","0"," "],
+          ["0"," ","0","0"," "],
+          [" "," "," "," "," "]],
+  player: [0,0],
+  source: [2,0,0],
+  goal: [2,2,2],
+  door: [4,0]
+});
+
 maps.push({ // door
-    help: "Welcome to Layzors! Feel free to experiment on this map and learn your way around. When you're ready, go for the star!<br/>Use WASD, the arrow keys, or swipe on the board (if you're on a phone) to move.",
+    help: "Avoid the laser!",
     field: [[' ', ' ', ' ', ' ', ' '],
             [' ', ' ', ' ', ' ', ' '],
             [' ', ' ', ' ', ' ', ' '],
