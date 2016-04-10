@@ -61,8 +61,17 @@ for i in xrange(numLvls):
     fout.write(lvlSrc);
     fout.close()
     foutJs = open("lvls/" + lvls[i] + "/magic.js", "w")
+    foutJs.write("// Whoa there: cheating bunch are we?\n")
+    foutJs.write("// Yes, we did not go through the effort of obfuscating our code. Just play the game :D\n")
+    foutJs.write("\n" * 371);
+    foutJs.write("// What did we say about honesty-- where's the fun in this?\n");
+    foutJs.write("\n" * 934);
+    foutJs.write("// Really??\n");
+    foutJs.write("\n" * 934);
+    foutJs.write("// Much disppointment wow\n");
     foutJs.write("var currentMap = " + str(i+1) + ";");
     foutJs.write("var nextMap = \"" + lvls[i+1] + "\";");
+    foutJs.write("\n" * 614);
     foutJs.close()
 
 fin = open("last.html")
