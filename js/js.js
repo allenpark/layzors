@@ -412,7 +412,7 @@ var start = function() {
     game.init(maps[currentMap-1], onFinish, helpFunc);
     gameWon = false;
     text.innerHTML = '&nbsp;';
-    level.innerHTML = "<h2>Layzors Level: " + currentMap + "</h2>";
+    level.innerHTML = "<h2>Layzors Level: " + currentMap + " / " + maps.length + "</h2>";
 };
 var text = document.getElementById('text');
 var level = document.getElementById('level');
